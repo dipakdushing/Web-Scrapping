@@ -5,13 +5,12 @@ var app = express()
  
 app.use(cors())
  
-
 app.use(express.json())
 
 
 app.post("/getjobs",async(req,res)=>{
       try {
-          let data=await start()
+          var data=await start()
           res.send(data)
       } 
       catch (error) {
@@ -21,7 +20,7 @@ app.post("/getjobs",async(req,res)=>{
 
 app.listen(1200,async()=>{
     try {
-        console.log("listening on port 1200")
+        console.log("listening on the port 1200")
     } 
     catch (error) {
         console.log(error) 
